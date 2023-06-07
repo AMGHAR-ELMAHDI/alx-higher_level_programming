@@ -1,0 +1,40 @@
+The ``1-my_list`` module
+==========================
+
+Using ``MyList``
+----------------
+
+Import ``MyList`` from the ``1-my_list`` module:
+
+    >>> MyList = __import__('1-my_list').MyList
+
+Tests:
+
+Regular function:
+
+    >>> list1 = MyList([1, 2, 3, 4, 5])
+    >>> list1.print_sorted()
+    [1, 2, 3, 4, 5]
+
+    >>> list2 = MyList([5, 4, 3, 2, 1])
+    >>> list2.print_sorted()
+    [1, 2, 3, 4, 5]
+
+    >>> list3 = MyList([4, 1, 5, 2, 3])
+    >>> list3.print_sorted()
+    [1, 2, 3, 4, 5]
+
+    >>> list4 = MyList([4])
+    >>> list4.print_sorted()
+    [4]
+
+    >>> list5 = MyList()
+    >>> list5.print_sorted()
+    []
+
+
+Invalid arguments:
+
+    >>> list1.print_sorted(5)
+    Traceback (most recent call last):
+    TypeError: print_sorted() takes 1 positional argument but 2 were given
